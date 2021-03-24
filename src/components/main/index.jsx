@@ -2,6 +2,7 @@ import React from "react";
 import { Box, makeStyles } from "@material-ui/core";
 import { ReactComponent as GithubIcon } from "../../images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/linkedin-icon.svg";
+import { ReactComponent as SendIcon } from "../../images/send-icon.svg";
 import colors from "../../theme/colors.module.scss";
 
 const useStyles = makeStyles(() => ({
@@ -35,6 +36,7 @@ function Sidebar() {
         className={classes.icon}
         onClick={() => window.open("https://www.linkedin.com/in/amraymanayoub97/", "_blank")}
       />
+      <SendIcon fill={colors.white} className={classes.icon} />
     </Box>
   );
 }
