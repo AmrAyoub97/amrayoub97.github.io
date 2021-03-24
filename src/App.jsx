@@ -5,6 +5,7 @@ import Blog from "./components/blog";
 import Experience from "./components/experience";
 import BlogItem from "./components/blog/blog";
 import Sidebar from "./components/main";
+import Logo from "./images/logo.png";
 import { Box, makeStyles, ThemeProvider, CssBaseline } from "@material-ui/core";
 import { theme } from "./theme";
 
@@ -12,6 +13,12 @@ const useStyles = makeStyles(() => ({
   root: {
     height: "100%",
     minHeight: "100vh",
+  },
+  logo: {
+    position: "absolute",
+    width: 80,
+    margin: 25,
+    zIndex: 3,
   },
 }));
 
@@ -21,6 +28,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <img className={classes.logo} src={Logo} alt="logo" />
       <Sidebar />
       <Box className={classes.root}>
         <Router>

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, makeStyles } from "@material-ui/core";
 import { ReactComponent as GithubIcon } from "../../images/github-icon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/linkedin-icon.svg";
-import colors from "theme/colors.module.scss";
+import colors from "../../theme/colors.module.scss";
 
 const useStyles = makeStyles(() => ({
   socialLinksDiv: {
@@ -13,19 +13,10 @@ const useStyles = makeStyles(() => ({
     flexDirection: " column-reverse",
     minHeight: "75vh",
     marginTop: "150px",
+    marginLeft: "40px",
   },
   icon: {
-    "&:hover": {
-      background: "none",
-    },
-    "& g": {
-      fill: colors.white,
-    },
-    "&:hover, &:focus": {
-      "& g": {
-        fill: colors.grayInfoText,
-      },
-    },
+    marginTop: "20px",
   },
 }));
 
@@ -34,8 +25,16 @@ function Sidebar() {
 
   return (
     <Box className={classes.socialLinksDiv}>
-      <GithubIcon className={classes.icon} onClick={() => window.open("", "_blank")} />
-      <LinkedInIcon className={classes.icon} onClick={() => window.open("", "_blank")} />
+      <GithubIcon
+        fill={colors.white}
+        className={classes.icon}
+        onClick={() => window.open("https://github.com/AmrAyoub97", "_blank")}
+      />
+      <LinkedInIcon
+        fill={colors.white}
+        className={classes.icon}
+        onClick={() => window.open("https://www.linkedin.com/in/amraymanayoub97/", "_blank")}
+      />
     </Box>
   );
 }
