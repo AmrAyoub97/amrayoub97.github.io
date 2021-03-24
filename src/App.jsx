@@ -4,6 +4,7 @@ import Homepage from "./components/homepage";
 import Blog from "./components/blog";
 import Experience from "./components/experience";
 import BlogItem from "./components/blog/blog";
+import Sidebar from "./components/main";
 import { Box, makeStyles, ThemeProvider, CssBaseline } from "@material-ui/core";
 import { theme } from "./theme";
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Sidebar />
       <Box className={classes.root}>
         <Router>
           <Route path="/">

@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
 function Homepage() {
   const name = "Amr Ayoub";
   const description =
-    "I'm a Software Engineer with +1 years of experinace,  I think I have one of the best jobs in the world. I'm a maker. I use abstract ideas and I materialize them on a click of a button. I think that's awesome. ";
+    "I'm a Software Engineer with +1 years of experience,  I think I have one of the best jobs in the world. I'm a maker. I use abstract ideas and I materialize them on a click of a button. I think that's awesome. ";
 
   const classes = useStyles();
   const [value, setValue] = useDencrypt("_");
