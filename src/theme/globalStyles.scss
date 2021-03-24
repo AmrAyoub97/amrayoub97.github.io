@@ -1,0 +1,61 @@
+@import "./colors.module.scss";
+
+// global stuff
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:focus {
+  outline-color: #{map-get($colors, "yellow")};
+}
+
+#root,
+body,
+html {
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration-color: #{map-get($colors, "yellow")};
+}
+
+a:hover {
+  text-decoration-color: unset;
+}
+
+.undecoratedLink {
+  text-decoration: none;
+}
+
+.centeredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inherit;
+  font-size: inherit;
+  margin: 0;
+  font-weight: inherit;
+}

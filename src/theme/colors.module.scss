@@ -1,0 +1,22 @@
+$colors: (
+  "main": #ffffff,
+  "white": #ffffff,
+  "offwhite": #f4f2f1,
+  "cloud": #c5c4c2,
+  "grayLight": #a19e9d,
+  "gray": #4e4d4c,
+  "grayDark": #333333,
+  "grayDarker": #31302f,
+  "black": #000000,
+  "green": #46b27e,
+  "greenLight": #45b27e,
+  "yellow": #ffcd44,
+  "red": #ec6668,
+  "transparentBlack": #00000080,
+);
+
+:export {
+  @each $key, $value in $colors {
+    #{unquote($key)}: $value;
+  }
+}
