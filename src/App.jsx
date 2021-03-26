@@ -1,9 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Homepage from "./components/homepage";
-import Blog from "./components/blog";
-import Experience from "./components/experience";
-import BlogItem from "./components/blog/blog";
+import About from "./components/about";
+import Resume from "./components/resume";
 import Sidebar from "./components/main/sidebar";
 import Header from "./components/main/header";
 import Logo from "./images/logo.png";
@@ -37,14 +36,11 @@ function App() {
           <Route path="/">
             <Homepage />
           </Route>
-          <Route path="/blog">
-            <Blog />
+          <Route path="/about">
+            <About />
           </Route>
-          <Route path="/blog/:id">
-            <BlogItem />
-          </Route>
-          <Route path="/experience">
-            <Experience />
+          <Route path="/resume">
+            <Resume />
           </Route>
         </Router>
       </Box>

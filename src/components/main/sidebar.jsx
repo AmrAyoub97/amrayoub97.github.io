@@ -19,6 +19,10 @@ const useStyles = makeStyles(() => ({
   icon: {
     marginTop: "20px",
     cursor: "pointer",
+    fill: colors.white,
+    "&:hover": {
+      fill: colors.gray,
+    },
   },
 }));
 
@@ -27,18 +31,12 @@ function Sidebar() {
 
   return (
     <Box className={classes.socialLinksDiv}>
-      <GithubIcon
-        fill={colors.white}
-        className={classes.icon}
-        onClick={() => window.open("https://github.com/AmrAyoub97", "_blank")}
-      />
+      <GithubIcon className={classes.icon} onClick={() => window.open("https://github.com/AmrAyoub97", "_blank")} />
       <LinkedInIcon
-        fill={colors.white}
         className={classes.icon}
         onClick={() => window.open("https://www.linkedin.com/in/amraymanayoub97/", "_blank")}
       />
       <SendIcon
-        fill={colors.white}
         className={classes.icon}
         onClick={() => {
           window.open("mailto:amrayoub97@gmail.com");

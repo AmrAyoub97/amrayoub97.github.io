@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDencrypt } from "use-dencrypt-effect";
-import HALO from "vanta/dist/vanta.halo.min";
+import NET from "vanta/dist/vanta.net.min";
 import { Box, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
@@ -29,11 +29,19 @@ function Homepage() {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        HALO({
+        NET({
           el: myRef.current,
-          mouseControls: true,
+          mouseControls: false,
           touchControls: true,
-          gyroControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x4781d4,
+          backgroundColor: 0x151539,
+          points: 13.0,
+          spacing: 16.0,
         })
       );
     }

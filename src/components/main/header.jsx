@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, makeStyles, AppBar, Toolbar, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import colors from "../../theme/colors.module.scss";
 
 const useStyles = makeStyles(() => ({
   navbar: {
@@ -21,6 +22,11 @@ const useStyles = makeStyles(() => ({
     textDecoration: "none",
     float: "right",
   },
+  inactiveTab: {
+    "&:hover": {
+      color: colors.gray,
+    },
+  },
 }));
 
 function Header() {
@@ -32,27 +38,22 @@ function Header() {
         <Toolbar disableGutters>
           <Box className={classes.routesContainer}>
             <Link to="/" className={classes.headerItem}>
-              <Typography variant="h6" color="primary" component="span" className={classes.inactiveTab}>
+              <Typography variant="h6" color="primary" className={classes.inactiveTab}>
                 Home
               </Typography>
             </Link>
-            <Link to="/projects" className={classes.headerItem}>
-              <Typography variant="h6" color="primary" component="span" className={classes.inactiveTab}>
-                Projects
-              </Typography>
-            </Link>
             <Link to="/resume" className={classes.headerItem}>
-              <Typography variant="h6" color="primary" component="span" className={classes.inactiveTab}>
+              <Typography variant="h6" color="primary" className={classes.inactiveTab}>
                 Resume
               </Typography>
             </Link>
             <Link to="/about" className={classes.headerItem}>
-              <Typography variant="h6" color="primary" component="span" className={classes.inactiveTab}>
+              <Typography variant="h6" color="primary" className={classes.inactiveTab}>
                 About
               </Typography>
             </Link>
             <a href="mailto:amrayoub97@gmail.com" className={classes.headerItem}>
-              <Typography variant="h6" color="primary" component="span" className={classes.inactiveTab}>
+              <Typography variant="h6" color="primary" className={classes.inactiveTab}>
                 Contact
               </Typography>
             </a>
