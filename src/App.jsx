@@ -4,7 +4,8 @@ import Homepage from "./components/homepage";
 import Blog from "./components/blog";
 import Experience from "./components/experience";
 import BlogItem from "./components/blog/blog";
-import Sidebar from "./components/main";
+import Sidebar from "./components/main/sidebar";
+import Header from "./components/main/header";
 import Logo from "./images/logo.png";
 import { Box, makeStyles, ThemeProvider, CssBaseline } from "@material-ui/core";
 import { theme } from "./theme";
@@ -30,6 +31,7 @@ function App() {
       <CssBaseline />
       <img className={classes.logo} src={Logo} alt="logo" />
       <Sidebar />
+      <Header />
       <Box className={classes.root}>
         <Router>
           <Route path="/">

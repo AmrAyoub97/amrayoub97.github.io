@@ -40,12 +40,8 @@ const breakpoints = createBreakpoints({
 export const theme = createMuiTheme({
   breakpoints,
   palette: {
-    background: {
-      default: colors.offwhite,
-      paper: colors.white,
-    },
     primary: {
-      main: colors.gray,
+      main: colors.white,
     },
     secondary: {
       main: colors.grayLight,
@@ -118,9 +114,6 @@ export const theme = createMuiTheme({
     MuiPaper: {
       square: true,
     },
-    MuiAppBar: {
-      elevation: 0,
-    },
     ...{
       MuiSkeleton: {
         animation: "wave",
@@ -128,11 +121,6 @@ export const theme = createMuiTheme({
     },
   },
   overrides: {
-    MuiAppBar: {
-      colorPrimary: {
-        backgroundColor: colors.offwhite,
-      },
-    },
     MuiIcon: {
       fontSizeLarge: {
         fontSize: "2rem",

@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => ({
   },
   icon: {
     marginTop: "20px",
+    cursor: "pointer",
   },
 }));
 
@@ -36,7 +37,13 @@ function Sidebar() {
         className={classes.icon}
         onClick={() => window.open("https://www.linkedin.com/in/amraymanayoub97/", "_blank")}
       />
-      <SendIcon fill={colors.white} className={classes.icon} />
+      <SendIcon
+        fill={colors.white}
+        className={classes.icon}
+        onClick={() => {
+          window.open("mailto:amrayoub97@gmail.com");
+        }}
+      />
     </Box>
   );
 }
