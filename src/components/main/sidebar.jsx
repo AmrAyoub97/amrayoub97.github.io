@@ -31,10 +31,10 @@ function Sidebar() {
 
   return (
     <Box className={classes.socialLinksDiv}>
-      <GithubIcon className={classes.icon} onClick={() => window.open("https://github.com/AmrAyoub97", "_blank")} />
+      <GithubIcon className={classes.icon} onClick={() => window.open("https://github.com/amrabdelshafi97", "_blank")} />
       <LinkedInIcon
         className={classes.icon}
-        onClick={() => window.open("https://www.linkedin.com/in/amraymanayoub97/", "_blank")}
+        onClick={() => window.open("https://www.linkedin.com/in/amrabdelshafi97/", "_blank")}
       />
       <SendIcon
         className={classes.icon}
